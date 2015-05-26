@@ -3,7 +3,7 @@
   <%= javascript_include_tag :home_page %>
 <% end %>
 <div class= "welcome" id="js-welcome-header">
-  <%= form_tag "/auth/yammer" do %>
+  <%= form_tag "/auth/google_oauth2" do %>
   <div class="logo">
     <hgroup>
       <h1><img src="/assets/welcome-page/welcome-logo.svg" data-png-fallback="/assets/welcome-page/welcome-logo.png" alt="sched.do" /></h1>
@@ -16,7 +16,7 @@
   </div>
 
   <div class="sign-in">
-    <%= submit_tag "Sign in with Yammer", class: "sign-in",  id: "sign-in" %>
+    <%= submit_tag "Sign in with Google", class: "sign-in",  id: "sign-in" %>
   </div>
 
   <div class="learn-more-wrapper">

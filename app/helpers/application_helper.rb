@@ -8,7 +8,7 @@ module ApplicationHelper
   end
 
   def auth_yammer_path
-    '/auth/yammer'
+    '/auth/google_oauth2'
   end
 
   def image_url(source)

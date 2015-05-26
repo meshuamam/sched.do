@@ -6,25 +6,25 @@ describe EventsController, 'authentication' do
   it 'requires yammer login for #new' do
     get :new
 
-    expect(page).to redirect_to '/auth/yammer'
+    expect(page).to redirect_to '/auth/google_oauth2'
   end
 
   it 'requires yammer login for #create' do
     post :create
 
-    expect(page).to redirect_to '/auth/yammer'
+    expect(page).to redirect_to '/auth/google_oauth2'
   end
 
   it 'requires yammer login for #edit' do
     get :edit, id: YAMMER_EVENT_ID_FROM_FAKE
 
-    expect(page).to redirect_to '/auth/yammer'
+    expect(page).to redirect_to '/auth/google_oauth2'
   end
 
   it 'requires yammer login for #update' do
     put :update, id: YAMMER_EVENT_ID_FROM_FAKE
 
-    expect(page).to redirect_to '/auth/yammer'
+    expect(page).to redirect_to '/auth/google_oauth2'
   end
 
   it 'requires guest or yammer login for #show' do

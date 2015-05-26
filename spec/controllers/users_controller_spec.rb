@@ -29,7 +29,7 @@ describe UsersController do
       it 'requires yammer login for #update' do
         get :show
 
-        expect(page).to redirect_to '/auth/yammer'
+        expect(page).to redirect_to '/auth/google_oauth2'
       end
     end
   end

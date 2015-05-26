@@ -12,7 +12,7 @@
     owner: @event.owner,
     event_name: @event.name %></p>
   </div>
-  <%= form_tag "/auth/yammer" do %>
+  <%= form_tag "/auth/google_oauth2" do %>
     <section class="signin-with-yammer">
       <%= submit_tag "Sign in with Yammer", class: "sign-in",  id: "sign-in" %>
       <div class="agree-to-tos">

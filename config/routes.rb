@@ -1,5 +1,5 @@
 SchedDo::Application.routes.draw do
-  get '/auth/yammer/callback' => 'sessions#create'
+  get '/auth/google_oauth2/callback' => 'sessions#create'
   get '/auth/yammer_staging/callback' => 'sessions#create'
   get '/dashboard' => 'dashboard#active_users'
   get 'polls' => 'users#show'
@@ -32,7 +32,7 @@ SchedDo::Application.routes.draw do
   get(
     '',
     to: redirect do |segments, request|
-      "/auth/yammer/callback?#{request.query_string}"
+      "/auth/google_oauth2/callback?#{request.query_string}"
     end,
     constraints: lambda do |request|
       request.query_string.include?('auth=yammer&code=')
